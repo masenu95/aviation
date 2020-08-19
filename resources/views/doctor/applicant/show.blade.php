@@ -18,9 +18,9 @@
             </div>
             <div class="row peso-i">
                 
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="row ">
-                        <div class="col-4 item-peso">
+                        <div class="col-5 item-peso">
                             <h5>Surname:</h5>
                         </div>
                         <div class='col-7 item-peso'>
@@ -29,13 +29,28 @@
                     </div>
                   
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="row ">
-                        <div class="col-4 item-peso">
+                        <div class="col-5 item-peso">
                             <h5>First Name:</h5>
                         </div>
                         <div class='col-7 item-peso'>
                             <h5>{{$applicant->user->fname}}</h5>
+                        </div>
+                 </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="row ">
+                        <div class="col-5 item-peso">
+                            <h5>Gender:</h5>
+                        </div>
+                        <div class='col-7 item-peso'>
+                            <h5>@if ($applicant->user->gender==1)
+                                M
+                            @else
+                                F
+                            @endif
+                               </h5>
                         </div>
                  </div>
                 </div>
@@ -129,13 +144,48 @@
                         </div>
                  </div>
                 </div>
-                <div class="col-lg-5 col-md-5 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="row ">
                         <div class="col-7 item-peso">
                             <h5>Licence number:</h5>
                         </div>
                         <div class='col-5 item-peso'>
                             <h5>{{$applicant->user->flightiformation->licence_no}}</h5>
+                        </div>
+                 </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="row ">
+                        <div class="col-7 item-peso">
+                            <h5>Licence Type:</h5>
+                        </div>
+                        <div class='col-5 item-peso'>
+                            <h5>{{$applicant->user->flightiformation->licence_type}}</h5>
+                        </div>
+                 </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="row ">
+                        <div class="col-7 item-peso">
+                            <h5>Type of flight intended:</h5>
+                        </div>
+                        <div class='col-5 item-peso'>
+                            <h5>{{$applicant->user->flightiformation->type_of_flight}}</h5>
+                        </div>
+                 </div>
+                </div>
+
+                <div class="col-lg-8 col-md-8 col-sm-6">
+                    <div class="row ">
+                        <div class="col-2 item-peso">
+                            <h5>flight Time:</h5>
+                        </div>
+                        <div class='col-10 item-peso'>
+                            <h5>Last 6 Month:{{$applicant->user->flightiformation->last_six}} &nbsp;&nbsp;
+                                Last 12 Month:{{$applicant->user->flightiformation->last_twelve}}&nbsp;&nbsp;
+                                Total:{{$applicant->user->flightiformation->total}}
+                            </h5>
                         </div>
                  </div>
                 </div>

@@ -43,6 +43,6 @@ class User extends Authenticatable
     }
 
     public function flightiformation(){
-        return $this->belongsTo('App\Flightiformation');
+        return $this->hasOne('App\Flightiformation');
     }
 }
