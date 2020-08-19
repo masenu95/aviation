@@ -45,4 +45,8 @@ class User extends Authenticatable
     public function flightiformation(){
         return $this->hasOne('App\Flightiformation');
     }
+
+    public function denideexam(){
+        return $this->hasOne('App\Denideexam');
+    }
 }

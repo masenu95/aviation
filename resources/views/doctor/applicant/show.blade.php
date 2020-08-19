@@ -189,9 +189,82 @@
                         </div>
                  </div>
                 </div>
+
+                
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="row ">
+                        <div class="col-7 item-peso">
+                            <h5>Type of flying Intended:</h5>
+                        </div>
+                        <div class='col-5 item-peso'>
+                            <h5>{{$applicant->user->flightiformation->flying_intended}}</h5>
+                        </div>
+                 </div>
+                </div>
+
+                  
+                
+                </div>
              
                
         </div>
+        <div class="row" class="">
+            <h5 class="peso">Previous Aviation medical assessment denied</h5>
+        </div>
+        <div class="row peso-i">
+            @if ($applicant->user->denideexam)
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="row item-peso ">
+                    <div class="col-6 ">
+                        <h5>Medical eximiner:</h5>
+                    </div>
+                    <div class='col-6'>
+                        <h5>{{$applicant->user->denideexam->examiner}}</h5>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="row item-peso">
+                    <div class="col-5 ">
+                        <h5>Date:</h5>
+                    </div>
+                    <div class='col-7 '>
+                        <h5>{{$applicant->user->denideexam->date}}</h5>
+                    </div>
+             </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="row item-peso">
+                    <div class="col-5 ">
+                        <h5>Place:</h5>
+                    </div>
+                    <div class='col-7 '>
+                        <h5>{{$applicant->user->denideexam->place}}</h5>
+                    </div>
+             </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-4">
+                <br>
+                <h5>Description:</h5>
+                <div class="row item-peso">
+                    
+                        <h5>{{$applicant->user->denideexam->detail}}</h5>
+                   
+             </div>
+            </div>
+            @else
+            <h4>No denied Medical Examination</h4>                
+            @endif
+         
+      
+        </div>
+        <div class="row" class="">
+            <h5 class="peso">Any aircraft/Vehicle accident or reported incident since last medical</h5>
+        </div>
+         
+           
+    </div>
     </section>
 </section>
 
