@@ -49,4 +49,16 @@ class User extends Authenticatable
     public function denideexam(){
         return $this->hasOne('App\Denideexam');
     }
+
+    public function accident(){
+        return $this->hasOne('App\Accident');
+    }
+
+    public function alcohol(){
+        return $this->hasOne('App\Alcohol');
+    }
+
+    public function tobacco(){
+        return $this->hasOne('App\Tobaccoproduct');
+    }
 }

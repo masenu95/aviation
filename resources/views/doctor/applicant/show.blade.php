@@ -254,13 +254,184 @@
              </div>
             </div>
             @else
-            <h4>No denied Medical Examination</h4>                
+            <h4>No ccident or reported incident</h4>                
             @endif
          
       
         </div>
         <div class="row" class="">
             <h5 class="peso">Any aircraft/Vehicle accident or reported incident since last medical</h5>
+        </div>
+        <div class="row peso-i">
+            @if ($applicant->user->accident)
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="row item-peso">
+                    <div class="col-5 ">
+                        <h5>Date:</h5>
+                    </div>
+                    <div class='col-7 '>
+                        <h5>{{$applicant->user->accident->date}}</h5>
+                    </div>
+             </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="row item-peso">
+                    <div class="col-5 ">
+                        <h5>Place:</h5>
+                    </div>
+                    <div class='col-7 '>
+                        <h5>{{$applicant->user->accident->place}}</h5>
+                    </div>
+             </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-4">
+                <br>
+                <h5>Description:</h5>
+                <div class="row item-peso">
+                    
+                        <h5>{{$applicant->user->accident->detail}}</h5>
+                   
+             </div>
+            </div>
+            @else
+            <h4>No denied Medical Examination</h4>                
+            @endif
+         
+      
+        </div>
+        <div class="row" class="">
+            <h5 class="peso">Alcohol and tobacco products</h5>
+        </div>
+        <div class="row peso-i">
+            @if ($applicant->user->alcohol)
+            <div class="col-lg-6 col-md-6 col-sm-4">
+                Alcohol
+                <div class="row item-peso">
+                    <div class="col-5 ">
+                        <h5>Average week intake:</h5>
+                    </div>
+                    <div class='col-7 '>
+                        <h5>{{$applicant->user->alcohol->quantity}}</h5>
+                    </div>
+             </div>
+            </div>
+            @else
+            <h4>Doesn't take alcohol</h4>                
+            @endif
+        </div>
+      
+        <div class="row peso-i">
+            
+         <div class="col-12">
+            <h4>  Tobacco Product</h4>
+         </div>
+         
+            @if ($applicant->user->alcohol)
+          
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              
+                <div class="row item-peso">
+                    
+                    <div class="col-5 ">
+                        <h5>status:</h5>
+                    </div>
+                    <div class='col-7 '>
+                        <h5>{{$applicant->user->tobacco->status}}</h5>
+                    </div>
+             </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              
+                <div class="row item-peso">
+                    
+                    <div class="col-5 ">
+                        <h5>Date stopped:</h5>
+                    </div>
+                    <div class='col-7 '>
+                        <h5>{{$applicant->user->tobacco->datestopped}}</h5>
+                    </div>
+             </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              
+                <div class="row item-peso">
+                    
+                    <div class="col-5 ">
+                        <h5>state:</h5>
+                    </div>
+                    <div class='col-7 '>
+                        <h5>{{$applicant->user->tobacco->state}}</h5>
+                    </div>
+             </div>
+            </div>
+           
+            <div class="col-lg-4 col-md-4 col-sm-4">
+               
+                  <div class="row item-peso">
+                      
+                      <div class="col-5 ">
+                          <h5>amount:</h5>
+                      </div>
+                      <div class='col-7 '>
+                          <h5>{{$applicant->user->tobacco->amount}}</h5>
+                      </div>
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                  <div class="row item-peso">
+                      
+                      <div class="col-7 ">
+                          <h5>Number of years:</h5>
+                      </div>
+                      <div class='col-5 '>
+                          <h5>{{$applicant->user->tobacco->years}}</h5>
+                      </div>
+               </div>
+              </div>
+            @else
+                      
+            @endif
+        </div>
+
+        <div class="row" class="">
+            <h5 class="peso">Any medication including non-prescribed medication</h5>
+        </div>
+        <div class="row peso-i">
+            @if ($applicant->user->medication)
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="row item-peso">
+                    <div class="col-5 ">
+                        <h5>Date:</h5>
+                    </div>
+                    <div class='col-7 '>
+                        <h5>{{$applicant->user->accident->date}}</h5>
+                    </div>
+             </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="row item-peso">
+                    <div class="col-5 ">
+                        <h5>Place:</h5>
+                    </div>
+                    <div class='col-7 '>
+                        <h5>{{$applicant->user->accident->place}}</h5>
+                    </div>
+             </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-4">
+                <br>
+                <h5>Description:</h5>
+                <div class="row item-peso">
+                    
+                        <h5>{{$applicant->user->accident->detail}}</h5>
+                   
+             </div>
+            </div>
+            @else
+            <h4>Doesn't use any medication</h4>                
+            @endif
+         
+      
         </div>
          
            
