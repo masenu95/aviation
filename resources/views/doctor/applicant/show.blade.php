@@ -401,10 +401,10 @@
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="row item-peso">
                     <div class="col-5 ">
-                        <h5>Date:</h5>
+                        <h5>Name:</h5>
                     </div>
                     <div class='col-7 '>
-                        <h5>{{$applicant->user->accident->date}}</h5>
+                        <h5>{{$applicant->user->medication->name}}</h5>
                     </div>
              </div>
             </div>

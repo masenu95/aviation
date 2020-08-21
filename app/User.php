@@ -61,4 +61,8 @@ class User extends Authenticatable
     public function tobacco(){
         return $this->hasOne('App\Tobaccoproduct');
     }
+
+    public function medication(){
+        return $this->hasOne('App\Medication');
+    }
 }
