@@ -453,49 +453,72 @@
             <h5 class="peso">Any limitation on licence/Restriction</h5>
         </div>
         <div class="row peso-i">
-            @if ($applicant->user->medication)
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="row item-peso">
-                    <div class="col-5 ">
-                        <h5>Name:</h5>
-                    </div>
-                    <div class='col-7 '>
-                        <h5>{{$applicant->user->medication->name}}</h5>
-                    </div>
-             </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="row item-peso">
-                    <div class="col-6 ">
-                        <h5>Date commenced:</h5>
-                    </div>
-                    <div class='col-6 '>
-                        <h5>{{$applicant->user->medication->date}}</h5>
-                    </div>
-             </div>
-            </div>
+            @if ($applicant->user->restriction)
             <div class="col-lg-12 col-md-12 col-sm-4">
-                <br>
-                <h5>Dose:</h5>
+                <h5>Detail:</h5>
                 <div class="row item-peso">
                     <div class='col-6 '>
-                        <h5>{{$applicant->user->medication->dose}}</h5>
+                        <h5>{{$applicant->user->restriction->detail}}</h5>
                     </div>
                        
                    
              </div>
             </div>
             @else
-            <h4>Doesn't use any medication</h4>                
+            <h4>Doesn't have any licence limitation or restriction</h4>                
             @endif
          
       
+        </div>
+
+
+        <div class="appoint-div">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Make Appointment
+              </button>
         </div>
          
            
     </div>
     </section>
 </section>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Applicant schedule</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <form action="">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Choose date</label>
+                        <input type="date" class="form-control" id="exampleInputDate"  >    
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Time</label>
+                        <div class="row">
+                            <div class="col-2">
+                                <input type="text"  id="exampleInputText" class="form-control" style="width: 80px" placeholder="Hr" >
+                            </div> 
+                            <div class="col-2">
+                                <input type="text"  id="exampleInputText" class="form-control" style="width: 80px" placeholder="Min" >
+                            </div> 
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
 
 <script>
     function visibility(ids,name){
