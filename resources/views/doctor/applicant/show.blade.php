@@ -492,7 +492,7 @@
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>
-            <form action="">
+            <form action="juma">
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Choose date</label>
@@ -502,10 +502,30 @@
                         <label for="exampleInputEmail1">Time</label>
                         <div class="row">
                             <div class="col-2">
-                                <input type="text"  id="exampleInputText" class="form-control" style="width: 80px" placeholder="Hr" >
+                                <select class="form-control" id="exampleFormControlSelect1" style="width: 80px">
+                                    <option>Hr</option>
+                                    @for ($i = 0; $i < 24; $i++)
+                                        @if ($i<10)
+                                            <option>{{'0'.$i}}</option> 
+                                            @else
+                                            <option>{{$i}}</option> 
+                                        @endif
+                                            
+                                    @endfor
+                                  </select>
                             </div> 
                             <div class="col-2">
-                                <input type="text"  id="exampleInputText" class="form-control" style="width: 80px" placeholder="Min" >
+                                <select class="form-control" id="exampleFormControlSelect1" style="width: 80px">
+                                    <option>Min</option>
+                                    @for ($i = 0; $i < 60; $i=$i+5)
+                                        @if ($i<10)
+                                            <option>{{'0'.$i}}</option> 
+                                            @else
+                                            <option>{{$i}}</option> 
+                                        @endif
+                                            
+                                    @endfor
+                                  </select>
                             </div> 
                         </div>
                        
@@ -513,7 +533,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Confirm appointment</button>
+                    <button type="submit" class="btn btn-primary">Confirm appointment</button>
                 </div>
             </form>
         </div>
