@@ -492,36 +492,37 @@
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>
-            <form action="juma">
+            <form action="{{route('appointment.store')}}" method="POST" >
+                @csrf
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Choose date</label>
-                        <input type="date" class="form-control" id="exampleInputDate"  >    
+                        <input type="date" class="form-control" id="exampleInputDate" name="date" >    
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Time</label>
                         <div class="row">
                             <div class="col-2">
-                                <select class="form-control" id="exampleFormControlSelect1" style="width: 80px">
+                                <select class="form-control" id="exampleFormControlSelect1" style="width: 80px" name="hr">
                                     <option>Hr</option>
                                     @for ($i = 0; $i < 24; $i++)
                                         @if ($i<10)
-                                            <option>{{'0'.$i}}</option> 
+                                            <option value="{{'0'.$i}}">{{'0'.$i}}</option> 
                                             @else
-                                            <option>{{$i}}</option> 
+                                            <option value="{{$i}}">{{$i}}</option> 
                                         @endif
                                             
                                     @endfor
                                   </select>
                             </div> 
                             <div class="col-2">
-                                <select class="form-control" id="exampleFormControlSelect1" style="width: 80px">
+                                <select class="form-control" id="exampleFormControlSelect1" style="width: 80px" name="min">
                                     <option>Min</option>
                                     @for ($i = 0; $i < 60; $i=$i+5)
                                         @if ($i<10)
-                                            <option>{{'0'.$i}}</option> 
+                                            <option value="{{'0'.$i}}">{{'0'.$i}}</option> 
                                             @else
-                                            <option>{{$i}}</option> 
+                                            <option value="{{$i}}">{{$i}}</option> 
                                         @endif
                                             
                                     @endfor

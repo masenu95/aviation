@@ -45,6 +45,8 @@ Route::resource('famhistory','FamhistoriesController');
 
 Route::resource('applicants','ApplicantsController');
 
+Route::resource('appointment','AppointmentsController');
+
 
 
 
