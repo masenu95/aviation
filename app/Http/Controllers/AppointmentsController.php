@@ -58,14 +58,14 @@ class AppointmentsController extends Controller
 
             if($appointment){
              
-                $data = array('name'=>"Virat Gandhi");
+                $data = array('name'=>$appointment->applicant->user->fname.' '.$appointment->applicant->user->lname,'date'=>$appointment->date,'time'=>$appointment->time);
    
                 Mail::send(['text'=>'mail'], $data, function($message) {
-                $message->to('masenu95@gmail.com', 'Tutorials Point')->subject
-                    ('Laravel Basic Testing Mail');
-                $message->from('infoaviation@gmail.com','Virat Gandhi');
+                $message->to('masenu95@gmail.com')->subject
+                    ('Aviation Appointment');
+                $message->from('non-reply@aviation.com','Aviation Medical Doctor');
                  });
-            echo "Basic Email Sent. Check your inbox.";
+           return back()->with('success','Appointment successful schedule');
             }
         }
     
