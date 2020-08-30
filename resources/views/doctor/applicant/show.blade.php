@@ -495,6 +495,7 @@
             <form action="{{route('appointment.store')}}" method="POST" >
                 @csrf
                 <div class="modal-body">
+                <input type="hidden" name="applicant" value="{{$applicant->id}}">  
                     <div class="form-group">
                         <label for="exampleInputEmail1">Choose date</label>
                         <input type="date" class="form-control" id="exampleInputDate" name="date" >    
