@@ -4,6 +4,11 @@
     <section class="wrapper">
         <div class="block-header">
             <div class="row">
+                @if(session()->has('success'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                @endif
                 <h6>Online Aviation application form for medical assessment</h6>
                 <div class="col-lg-9 col-md-9 col-sm-6">
                    

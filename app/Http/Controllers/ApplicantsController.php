@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Applicant;
 use App\Doctor;
 use App\Selected;
+use App\Appointment;
 use Auth;
 
 class ApplicantsController extends Controller
@@ -53,9 +54,16 @@ class ApplicantsController extends Controller
     public function show($id)
     {
         //
+      
         $applicant=Applicant::find($id);
         $doctror=$applicant->doctors()->where('user_id',Auth::user()->id)->first();
-      
+        $these=[
+            'doctor_id'=>$doctror->id,
+            'applicant_id'=>$applicant->id
+        ];
+
+        $appointment=Appointment::where($these)->where('date', '>=', '30-08-2020')->count();
+        return $appointment;
        
       return view('doctor.applicant.show',['applicant'=>$applicant]);
     }

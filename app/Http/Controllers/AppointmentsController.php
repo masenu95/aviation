@@ -58,7 +58,12 @@ class AppointmentsController extends Controller
 
             if($appointment){
              
-                $data = array('name'=>$appointment->applicant->user->fname.' '.$appointment->applicant->user->lname,'date'=>$appointment->date,'time'=>$appointment->time);
+                $data = array(
+                'name'=>$appointment->applicant->user->fname.' '.$appointment->applicant->user->lname,
+                'date'=>$appointment->date,
+                'time'=>$appointment->time,
+                'doctor'=>Auth::user()->fname.' '.Auth::user()->lname
+            );
    
                 Mail::send(['text'=>'mail'], $data, function($message) {
                 $message->to('masenu95@gmail.com')->subject
