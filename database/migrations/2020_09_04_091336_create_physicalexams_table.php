@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClitestsTable extends Migration
+class CreatePhysicalexamsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,13 @@ class CreateClitestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('clitests', function (Blueprint $table) {
+        Schema::create('physicalexams', function (Blueprint $table) {
             $table->id();
+            $table->string('weight');
+            $table->string('height');
+            $table->string('bmi');
+            $table->string('eyecolor');
+            $table->string('haircolor');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreateClitestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clitests');
+        Schema::dropIfExists('physicalexams');
     }
 }

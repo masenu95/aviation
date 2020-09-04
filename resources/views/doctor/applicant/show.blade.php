@@ -478,9 +478,18 @@
 
 
         <div class="appoint-div">
+            @if(empty($appointment))
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Make Appointment
               </button>
+              @else
+              
+               Appointment on: {{$appointment->date.' at:'.$appointment->time}}<br><br><br>
+               <a href="{{url(/clinical)}}">Test Result</a>
+           
+              @endif
+
+
         </div>
          
            

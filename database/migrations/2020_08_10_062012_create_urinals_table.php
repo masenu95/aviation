@@ -15,8 +15,11 @@ class CreateUrinalsTable extends Migration
     {
         Schema::create('urinals', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('test');
+            $table->string('ph');
+            $table->string('sugar');
+            $table->string('protein');
+            $table->string('apperance');
+            $table->string('blood');
             $table->integer('user_id')->references('id')->on('users'); 
             $table->timestamps();
         });

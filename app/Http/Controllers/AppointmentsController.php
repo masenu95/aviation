@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Appointment;
 use Auth;
 use Mail;
+use App\Doctor;
 class AppointmentsController extends Controller
 {
     /**
@@ -48,9 +49,9 @@ class AppointmentsController extends Controller
         ];
         $check=Appointment::where($theseMatch)->count();
         if($check<1){
-
+            $doctor=Doctor::where('user_id',Auth::user()->id)->first();
             $appointment=Appointment::create([
-                'doctor_id'=>Auth::user()->id,
+                'doctor_id'=>$doctor->id,
                 'applicant_id'=>$request->applicant,
                 'date'=>$request->date,
                 'time'=>$request->hr.':'.$request->min,

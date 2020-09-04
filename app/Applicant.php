@@ -20,4 +20,6 @@ class Applicant extends Model
         public function doctors(){
             return $this->belongsToMany('App\Doctor');
         }
+
+     
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDoctorUserTable extends Migration
+class CreateRestingpulsesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateDoctorUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('doctor_user', function (Blueprint $table) {
+        Schema::create('restingpulses', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->references('id')->on('users');
+            $table->string('ratebpm');
+            $table->string('rythm_reg');
+            $table->string('rythm_irreg');
             $table->integer('doctor_id')->references('id')->on('doctors');
+            $table->integer('applicant_id')->references('id')->on('applicants');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateDoctorUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('doctor_user');
+        Schema::dropIfExists('restingpulses');
     }
 }
