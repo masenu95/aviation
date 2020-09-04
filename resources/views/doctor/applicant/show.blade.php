@@ -485,7 +485,7 @@
               @else
               
                Appointment on: {{$appointment->date.' at:'.$appointment->time}}<br><br><br>
-               <a href="{{url(/clinical)}}">Test Result</a>
+               <a href="{{url('clinical')}}">Test Result</a>
            
               @endif
 
