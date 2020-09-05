@@ -59,6 +59,9 @@ class ApplicantsController extends Controller
         $applicant=Applicant::find($id);
         $doctor=$applicant->doctors()->where('user_id',Auth::user()->id)->first();
 
+        
+
+      
      
         $these=[
             'doctor_id'=>$doctor->id,
@@ -66,10 +69,7 @@ class ApplicantsController extends Controller
         ];
 
 
-        $appointment=Appointment::where($these)->where('date', '>=', date("Y-m-d"))->first();
-
-  
-       
+        $appointment=Appointment::where($these)->where('date', '>=', date("Y-m-d"))->first(); 
        
       return view('doctor.applicant.show',['applicant'=>$applicant,'appointment'=>$appointment]);
     }

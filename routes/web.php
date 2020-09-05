@@ -47,6 +47,10 @@ Route::resource('applicants','ApplicantsController');
 
 Route::resource('appointment','AppointmentsController');
 
+Route::resource('clinical','ClinicsController');
+
+Route::get('clinical/create/{id}','ClinicsController@create');
+
 
 
 
