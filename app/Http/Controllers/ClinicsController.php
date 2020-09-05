@@ -34,9 +34,18 @@ class ClinicsController extends Controller
             'doctor_id'=>$doctor->id,
             'applicant_id'=>$id,
         ];
-        $date=date("Y-m-d H:i:s");
+        $d=strtotime("-2 Months");
+        $date=date("Y-m-d H:i:s",$d);
+
+        $clinics=Clinicalexam::where($these)->where('created_at','>',$date)->first();
+        if($clinics){
+            return view('doctor.clinic.show',['clinics'=>$clinics])->with(['applicant'=>$id]);
+        }else{
+            return view('doctor.clinic.create',['applicant'=>$id])->with('applicant',$id);
+        }
+
        
-        return view('doctor.clinic.create',['applicant'=>$id]);
+        
     }
 
     /**

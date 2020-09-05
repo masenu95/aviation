@@ -31,7 +31,7 @@
             <div id="detail-form">
                 <div class="form-group row">
                     <div class="col-lg-6 col-md-6">
-                        			eyecolor	haircolor	
+                        					
                       <input type="text" class="form-control" placeholder="Weight" name="weight" required>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -40,62 +40,20 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-lg-6 col-md-6">
-                      <input type="text" class="form-control" placeholder="Ophthalmology" name="opthalmology" required>
+                      <input type="text" class="form-control" placeholder="Height" name="height" required>
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" class="form-control" placeholder="Chest-Lungs & Breast" name="chest" required>
+                        <input type="text" class="form-control" placeholder="Eye Color" name="eyecolor" required>
                       </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-lg-6 col-md-6">
-                      <input type="text" class="form-control" placeholder="Cardio-Vascular System" name="cardio" required>
+                      <input type="text" class="form-control" placeholder="Hair color" name="haircolor" required>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" class="form-control" placeholder="Abdomen Hernia/Liver/Spleen" name="abdomen" required>
-                      </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-lg-6 col-md-6">
-                      <input type="text" class="form-control" placeholder="Anus & Rectum" name="anus" required>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" class="form-control" placeholder="Endocrine system" name="endocrine" required>
-                      </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-lg-6 col-md-6">
-                      <input type="text" class="form-control" placeholder="Anus & Rectum" name="anus" required>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" class="form-control" placeholder="Endocrine system" name="endocrine" required>
-                      </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-lg-6 col-md-6">
-                      <input type="text" class="form-control" placeholder="Psychiatric" name="psychiatric" required>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" class="form-control" placeholder="Neurological System Reflaxes,etc" name="neurological" required>
-                      </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-lg-6 col-md-6">
-                      <input type="text" class="form-control" placeholder="Skin and lymphatic" name="skin" required>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" class="form-control" placeholder="Musculoskeletal spine,Upper and Lower limbs" name="musculoskeletal" required>
-                      </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-lg-6 col-md-6">
-                      <input type="text" class="form-control" placeholder="General" name="general" required>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" class="form-control" placeholder="Identifying marks/tattoos/scars" name="identifying" required>
-                      </div>
+                  
                 </div>
             </div>
-        <input type="hidden" name="applicant" value="{{session()->get('applicant')}}">
+    
 
             <hr />
             <input type="submit" class="submitbtn" value="Next">

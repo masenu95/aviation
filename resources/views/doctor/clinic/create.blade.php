@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h4 class="form-app">Medication</h4>
+    <h4 class="form-app">Clinical examination</h4>
     <div class="row form-application">
         
         <div class="col-lg-4 col-md-4">

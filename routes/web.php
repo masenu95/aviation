@@ -51,6 +51,8 @@ Route::resource('clinical','ClinicsController');
 
 Route::get('clinical/create/{id}','ClinicsController@create');
 
+Route::resource('phy','PhysController');
+
 
 
 
