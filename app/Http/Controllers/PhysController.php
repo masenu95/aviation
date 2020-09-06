@@ -8,6 +8,8 @@ use App\Doctor;
 use App\Physicalexam;
 use App\Bloodpressure;
 use App\Restingpulse;
+use App\Urinal;
+use App\Aspect;
 
 class PhysController extends Controller
 {
@@ -55,11 +57,21 @@ class PhysController extends Controller
             'rythm_irreg'=> 'required|string|max:255',
             'systolic'=> 'required|string|max:255',
             'diastolic'=> 'required|string|max:255',
+            'ph'=> 'required|string|max:255',
+            'sugar'=> 'required|string|max:255',
+            'protein'=> 'required|string|max:255',
+            'appearance'=> 'required|string|max:255',
+            'blood'=> 'required|string|max:255',
+            'mental'=> 'required|string|max:255',
+            'behavior'=> 'required|string|max:255',
+            'physical'=> 'required|string|max:255',
+            'advice'=> 'required|string|max:255',
+         
    		
         ]);
             $doctor=Doctor::where('user_id',Auth::user()->id)->first();
 
-
+            			
         $phy=Physicalexam::create([
             'weight'=>$request->weight,
             'height'=>$request->height,
@@ -74,6 +86,8 @@ class PhysController extends Controller
                 $bp=Bloodpressure::create([
                     'systolic'=>$request->weight,
                     'diastolic'=>$request->weight,
+                    'doctor_id'=>$doctor->id,
+                    'applicant_id'=>$request->applicant,
                 ]);
 
                 if($bp){
@@ -81,10 +95,37 @@ class PhysController extends Controller
                         'ratebpm'=>$request->ratebpm,
                         'rythm_reg'=>$request->rythm_reg,
                         'rythm_irreg'=>$request->rythm_irreg,
+                        'doctor_id'=>$doctor->id,
+                        'applicant_id'=>$request->applicant,
                     ]);
 
                     if($restpulse){
-                        return redirect()->route('phy.index')->with(['success'=>'Your have successful complete previous step please proceed with this step','applicant'=>$request->applicant]); 
+                        				
+                    $urinal=Urinal::create([
+                        'ph'=>$request->ph,
+                        'sugar'=>$request->sugar,
+                        'protein'=>$request->protein,
+                        'apperance'=>$request->appearance,
+                        'blood'=>$request->blood,
+                        'doctor_id'=>$doctor->id,
+                        'applicant_id'=>$request->applicant,
+                        ]);
+
+                        if($urinal){
+                            $aspect=Aspect::create([
+                                'mental'=>$request->mental,
+                                'behavior'=>$request->behavior,
+                                'physical'=>$request->physical,
+                                'advice'=>$request->advice,
+                                'doctor_id'=>$doctor->id,
+                                'applicant_id'=>$request->applicant,
+                            ]);
+
+                            if($aspect){
+                                return redirect()->route('phy.index')->with(['success'=>'Your have successful complete previous step please proceed with this step','applicant'=>$request->applicant]); 	
+                            }
+                        }
+                       
                     }
                 }
         

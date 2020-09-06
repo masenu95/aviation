@@ -18,6 +18,7 @@ class CreateEyesTable extends Migration
             $table->string('righteye');
             $table->string('lefteye');
             $table->string('botheyes');
+            $table->string('test');
             $table->integer('user_id')->references('id')->on('users');
             $table->timestamps();
         });

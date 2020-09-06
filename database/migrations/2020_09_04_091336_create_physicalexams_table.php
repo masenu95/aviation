@@ -20,6 +20,8 @@ class CreatePhysicalexamsTable extends Migration
             $table->string('bmi');
             $table->string('eyecolor');
             $table->string('haircolor');
+            $table->integer('doctor_id')->references('id')->on('doctors');
+            $table->integer('applicant_id')->references('id')->on('applicants');
             $table->timestamps();
         });
     }

@@ -131,7 +131,7 @@
         </div>
       </div>
 
-      <a href="{{url('phy/create/'.$clinics->applicant_id)}}">Next</a>
+      <a href="{{url('phy/create/'.$clinics->applicant_id)}}"  class="submitbtn">Next</a>
         </div>
     </div>
   

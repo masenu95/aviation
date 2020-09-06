@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Bloodpressure extends Model
+class Aspect extends Model
 {
     //
     protected $fillable = [
-        'systolic','diastolic','doctor_id','applicant_id',
+        'mental','behavior','physical','advice','doctor_id','applicant_id'
     ];
 
     public function applicant(){
@@ -19,3 +19,5 @@ class Bloodpressure extends Model
         return $this->belongsTo('App\Doctor');
     }
 }
+
+				

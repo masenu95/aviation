@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUrinalsTable extends Migration
+class CreateAspectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateUrinalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('urinals', function (Blueprint $table) {
+        Schema::create('aspects', function (Blueprint $table) {
             $table->id();
-            $table->string('ph');
-            $table->string('sugar');
-            $table->string('protein');
-            $table->string('apperance');
-            $table->string('blood');
+            $table->string('mental');
+            $table->string('behavior');
+            $table->string('physical');
+            $table->string('advice');
             $table->integer('doctor_id')->references('id')->on('doctors');
             $table->integer('applicant_id')->references('id')->on('applicants');
             $table->timestamps();
@@ -33,6 +32,6 @@ class CreateUrinalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('urinals');
+        Schema::dropIfExists('aspects');
     }
 }
