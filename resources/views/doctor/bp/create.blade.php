@@ -275,10 +275,10 @@
                           <tr>
                             <th scope="row">Right</th>
                             <td><input 
-                                type="radio" name="emotion" 
-                                id="sad" class="input-hidden" />
-                              <label for="sad">
-                                <i class="fas fa-check"></i>
+                                type="radio" name="audiogram" 
+                                id="250" class="input-hidden" />
+                              <label for="250" class="audio-g">
+                                <i  class="fas fa-check"></i>
                               </label>
                               </td>
                             <td></td>

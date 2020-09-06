@@ -1011,6 +1011,17 @@ textarea.input {
     margin-right: 70px;
 }
 
+.input-hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+.audio-g i {
+    width: 100%;
+    padding-left: 15px;
+    font-size: large;
+}
+
 .appoint-div a {
     color: #fff;
     background-color: #343a40;
