@@ -202,20 +202,20 @@
                             <th scope="row">Right</th>
                             <td  id="ar-250" >
                                 <label for="250" class="audio-g" >
-                                    <input type="radio" name="audiogram-right" id="r-250" value="250" class="input-hidden" />
+                                    <input type="radio" name="audiogramright" id="r-250" value="250" class="input-hidden" />
                                 <i  class="right fas "></i>
                               </label>
                               </td>
                               <td  id="ar-500" >
                                 <label for="r-500" class="audio-g" >
-                                    <input type="radio" name="audiogram-right" id="r-500" value="500" class="input-hidden" />
+                                    <input type="radio" name="audiogramright" id="r-500" value="500" class="input-hidden" />
                                 <i  class="right fas "></i>
                               </label>
                               </td>
                             @for ($i = 1000; $i < 7000; $i+=1000)
                             <td  id="{{'ar-'.$i}}" >
                                 <label for="{{'r-'.$i}}" class="audio-g" >
-                                    <input type="radio" name="audiogram-right" id="{{'r-'.$i}}" value="{{$i}}" class="input-hidden" />
+                                    <input type="radio" name="audiogramright" id="{{'r-'.$i}}" value="{{$i}}" class="input-hidden" />
                                 <i  class="right fas "></i>
                               </label>
                               </td>
@@ -228,20 +228,20 @@
                             <th scope="row">Left</th>
                             <td  id="al-250" >
                                 <label for="l-250" class="audio-g" >
-                                    <input type="radio" name="audiogram-left" id="l-250" value="250" class="input-hidden" />
+                                    <input type="radio" name="audiogramleft" id="l-250" value="250" class="input-hidden" />
                                 <i  class="left fas "></i>
                               </label>
                               </td>
                               <td  id="al-500" >
                                 <label for="l-500" class="audio-g" >
-                                    <input type="radio" name="audiogram-left" id="l-500" value="500" class="input-hidden" />
+                                    <input type="radio" name="audiogramleft" id="l-500" value="500" class="input-hidden" />
                                 <i  class="left fas "></i>
                               </label>
                               </td>
                             @for ($i = 1000; $i < 7000; $i+=1000)
                             <td  id="{{'al-'.$i}}" >
                                 <label for="{{'l-'.$i}}" class="audio-g" >
-                                    <input type="radio" name="audiogram-left" id="{{'l-'.$i}}" value="{{$i}}" class="input-hidden" />
+                                    <input type="radio" name="audiogramleft" id="{{'l-'.$i}}" value="{{$i}}" class="input-hidden" />
                                 <i  class="left fas "></i>
                               </label>
                               </td>
@@ -314,11 +314,9 @@
               
                  
             </div>
-            @if (session())
-            <input type="hidden" name="applicant" value="{{session()->get('applicant')}}">   
-            @else
+          
             <input type="hidden" name="applicant" value="{{$applicant}}">  
-            @endif
+        
         
 
             <hr />

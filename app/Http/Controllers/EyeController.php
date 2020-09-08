@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Eye;
 use App\Audiogram;
 use App\Specialtest;
+use App\Doctor;
+use Auth;
 
 
 class EyeController extends Controller
@@ -47,26 +49,26 @@ class EyeController extends Controller
       "rightinterm" =>"required",
       "leftinterm" => "required",
       "bothinterm" => "required",
-      "egc-date" => "required",
+      "egcdate" => "required",
       "audiogramright" => "required",
       "audiogramleft" => "required",
-      "egc-result" =>"required",
-      "egc-next" => "required",
-      "bgroup-date" => "required",
-      "bgroup-result" =>"required",
-      "bgroup-next" => "required",
-      "bglucose-date" => "required",
-      "bglucose-result" =>"required",
-      "bglucose-next" => "required",
-      "hiv-date" => "required",
-      "hiv-result" => "required",
-      "hiv-next" => "required",
-      "hb-date" => "required",
-      "hb-result" => "required",
-      "hb-next" => "required",
-      "upt-date" => "required",
-      "upt-result" => "required",
-      "upt-next" => "required",
+      "egcresult" =>"required",
+      "egcnext" => "required",
+      "bgroupdate" => "required",
+      "bgroupresult" =>"required",
+      "bgroupnext" => "required",
+      "bglucosedate" => "required",
+      "bglucoseresult" =>"required",
+      "bglucosenext" => "required",
+      "hivdate" => "required",
+      "hivresult" => "required",
+      "hivnext" => "required",
+      "hbdate" => "required",
+      "hbresult" => "required",
+      "hbnext" => "required",
+      "uptdate" => "required",
+      "uptresult" => "required",
+      "uptnext" => "required",
       "applicant" => "required",
         ]);
 
@@ -166,7 +168,7 @@ class EyeController extends Controller
                             }
 
                             if($hb){
-                                return redirect()->route('eye.index')->with(['success'=>'Your have successful complete previous step please proceed with this step','applicant'=>$request->applicant]);
+                                return redirect()->route('eye.show',[$upt->applicant_id])->with(['success'=>'Your have successful complete previous step please proceed with this step','applicant'=>$request->applicant]);
                             }
                         }
                     }
@@ -185,6 +187,7 @@ class EyeController extends Controller
     public function show($id)
     {
         //
+            return view('doctor.recomendation.create',['applicant'=>$id]);
     }
 
     /**
