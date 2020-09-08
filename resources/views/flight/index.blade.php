@@ -25,55 +25,64 @@
           <div class="col-lg-6 col-md-6">
             <div class="row">
                 <div class="col-7"> <h6>Licence Type:</h6></div>
-                <div class="col-4"> <strong>{{$flight->type}}</strong></div>
+                <div class="col-4"> <strong>{{$flight->licence_type}}</strong></div>
             </div>
           
           </div>
       </div>
+      <hr>
       <div class="row">
         <div class="col-lg-6 col-md-6">
             <div class="row">
-                <div class="col-7"><h6>BMI:</h6></div>
-                <div class="col-4"><strong>{{$phy->bmi}}</strong></div>
+                <div class="col-7"><h6>Type of flying intended:</h6></div>
+                <div class="col-4"><strong>{{$flight->type_of_flight}}</strong></div>
             </div>
          
         </div>
         <div class="col-lg-6 col-md-6">
             
                 <div class="row">
-                    <div class="col-7"><h6>Eyes Color:</h6></div>
-                    <div class="col-4"><strong>{{$phy->eyecolor}}</strong></div>
+                    <div class="col-7"><h6>Flight time last 6 months:</h6></div>
+                    <div class="col-4"><strong>{{$flight->last_six}}</strong></div>
                 </div>
              
        
         </div>
       </div>
+      <hr>
       <div class="row">
-        <div class="col-lg-6 col-md-6">     
-            <div class="row">
-                <div class="col-7"><h6>Hair color:</h6></div>
-                <div class="col-4"><strong>{{$phy->haircolor}}</strong></div>
-            </div>
-        </div>
         <div class="col-lg-6 col-md-6">
             <div class="row">
-                <div class="col-7"><h6>Systolic:</h6></div>
-                <div class="col-4"><strong>{{$bp->systolic}}</strong></div>
+                <div class="col-7"><h6>Flight time last 12 months:</h6></div>
+                <div class="col-4"><strong>{{$flight->last_twelve}}</strong></div>
             </div>
-      
+         
+        </div>
+        <div class="col-lg-6 col-md-6">
+            
+                <div class="row">
+                    <div class="col-7"><h6>Flight time total:</h6></div>
+                    <div class="col-4"><strong>{{$flight->total}}</strong></div>
+                </div>
+             
+       
         </div>
       </div>
-
+      <hr>
       <div class="row">
-        <div class="col-lg-6 col-md-6">     
+        <div class="col-lg-6 col-md-6">
             <div class="row">
-                <div class="col-7"><h6>Diastolic</h6></div>
-                <div class="col-5"><strong>{{$bp->diastolic}}</strong></div>
+                <div class="col-7"><h6>Flight intended:</h6></div>
+                <div class="col-4"><strong>{{$flight->flying_intended}}</strong></div>
             </div>
+         
         </div>
+       
+      </div>
+      <hr>
   
 
-      <a href="{{url('eye/create/'.$phy->applicant_id)}}"  class="submitbtn">Next</a>
+      <a href="{{url('medical/create/')}}"  class="submitbtn">Next</a>
         </div>
     </div>
   

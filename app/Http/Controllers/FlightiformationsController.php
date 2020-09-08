@@ -16,6 +16,13 @@ class FlightiformationsController extends Controller
     public function index()
     {
         //
+        $d=strtotime("-2 Months");
+        $date=date("Y-m-d H:i:s",$d);
+        $flight=Flightiformation::where('user_id',Auth::user()->id)->where('created_at','>',$date)->first();
+
+        return view('flight.index',['flight'=>$flight]);
+
+        
     }
 
     /**
@@ -26,7 +33,9 @@ class FlightiformationsController extends Controller
     public function create()
     {
         //
-        $flight=Flightiformation::where('user_id',Auth::user()->id)->first();
+        $d=strtotime("-2 Months");
+        $date=date("Y-m-d H:i:s",$d);
+        $flight=Flightiformation::where('user_id',Auth::user()->id)->where('created_at','>',$date)->first();
 
         if($flight){
             return view('flight.edit',['flight'=>$flight]);
