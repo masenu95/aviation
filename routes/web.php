@@ -55,6 +55,9 @@ Route::get('phy/create/{id}','PhysController@create');
 
 Route::resource('phy','PhysController');
 
+Route::resource('eye','EyeController');
+Route::get('eye/create/{id}','EyeController@create');
+
 
 
 

@@ -32,6 +32,27 @@ class PhysController extends Controller
     public function create($id)
     {
         //
+        $doctor=Doctor::where('user_id',Auth::user()->id)->first();
+
+        $these=[
+            'doctor_id'=>$doctor->id,
+            'applicant_id'=>$id,
+        ];
+        $d=strtotime("-2 Months");
+        $date=date("Y-m-d H:i:s",$d);
+        $phy=Physicalexam::where($these)->where('created_at','>',$date)->first();
+        $bp=Bloodpressure::where($these)->where('created_at','>',$date)->first();
+        $rest=Restingpulse::where($these)->where('created_at','>',$date)->first();
+        $urinal=Urinal::where($these)->where('created_at','>',$date)->first();
+        $aspect=Aspect::where($these)->where('created_at','>',$date)->first();
+       
+        
+        if($phy){
+            return view('doctor.phy.show',['phy'=>$phy,'bp'=>$bp,'rest'=>$rest,'urinal'=>$urinal,'aspect'=>$aspect])->with(['applicant'=>$id]);
+        }else{
+            return view('doctor.phy.create',['applicant'=>$id]);
+        }
+
         return view('doctor.phy.create',['applicant'=>$id]);
     }
 

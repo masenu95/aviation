@@ -1016,6 +1016,22 @@ textarea.input {
     left: -9999px;
 }
 
+.input-special {
+    border: none;
+    background-color: transparent;
+    width: 70%;
+    margin-left: 10%;
+}
+
+.input-special:hover,
+.input-special:focus {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 70%;
+    margin-left: 10%;
+}
+
 .audio-g i {
     width: 100%;
     padding-left: 15px;
