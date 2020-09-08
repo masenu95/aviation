@@ -2,15 +2,15 @@
 
 @section('content')
 <div class="container">
-    <h4 class="form-app">Vision,Audiogram and Special Investigation</h4>
+    <h4 class="form-app">Recommendation</h4>
     <div class="row form-application">
         
         <div class="col-lg-4 col-md-4">
             <ul class="app-avs">
             <li><a  href="" >clinical examination</a></li>
                 <li><a href="#">Phyical examination</a></li>
-                <li><a href="#" class="actives" >Vision,Audiogram and Special Investigation</a></li>
-                <li><a href="#" class="disable">Recomendation</a></li>
+                <li><a href="#" >Vision,Audiogram and Special Investigation</a></li>
+                <li><a href="#"  class="actives">Recomendation</a></li>
             </ul>
             
         </div>
@@ -70,6 +70,12 @@
             </div>
         </div>  
          </div>
+                </div>
+
+         <div class="form-group">
+          <label for="exampleFormControlTextarea1">Comments</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" name="comment" rows="3"></textarea>
+        </div>
 
             <input type="hidden" name="applicant" value="{{$applicant}}">  
         
