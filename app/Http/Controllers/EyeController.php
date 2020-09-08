@@ -110,29 +110,70 @@ class EyeController extends Controller
                         'doctor_id'	=>$doctor->id,
                         'applicant_id'=>$request->applicant,
                     ]);
+
+                    if($ecg){
+                        $bgroup=Specialtest::create([
+                            'test'=>'Blood grouping',
+                            'date_performed'=>$request->bgroupdate,
+                            'result'=>$request->bgroupresult,
+                            'next_due'=>$request->bgroupnext,
+                            'doctor_id'	=>$doctor->id,
+                            'applicant_id'=>$request->applicant,  
+                        ]);
+
+                        if($bgroup){
+                            $bglucose=Specialtest::create([
+                                'test'=>'Blood glucose',
+                                'date_performed'=>$request->bglucosedate,
+                                'result'=>$request->bglucoseresult,
+                                'next_due'=>$request->bglucosenext,
+                                'doctor_id'	=>$doctor->id,
+                                'applicant_id'=>$request->applicant,  
+                            ]);
+                        }
+
+                        if($bglucose){
+                            $hiv = Specialtest::create([
+                                'test'=>'Blood glucose',
+                                'date_performed'=>$request->hivdate,
+                                'result'=>$request->hivresult,
+                                'next_due'=>$request->hivnext,
+                                'doctor_id'	=>$doctor->id,
+                                'applicant_id'=>$request->applicant,  
+                            ]);
+                        }
+
+                        if($hiv){
+
+                            $hb = Specialtest::create([
+                                'test'=>'Hb level',
+                                'date_performed'=>$request->hbdate,
+                                'result'=>$request->hbresult,
+                                'next_due'=>$request->hbnext,
+                                'doctor_id'	=>$doctor->id,
+                                'applicant_id'=>$request->applicant,   
+                            ]);
+
+                            if($hb){
+                                $upt = Specialtest::create([
+                                    'test'=>'UPT',
+                                    'date_performed'=>$request->uptdate,
+                                    'result'=>$request->uptresult,
+                                    'next_due'=>$request->uptnext,
+                                    'doctor_id'	=>$doctor->id,
+                                    'applicant_id'=>$request->applicant,   
+                                ]);
+                            }
+
+                            if($hb){
+                                return redirect()->route('eye.index')->with(['success'=>'Your have successful complete previous step please proceed with this step','applicant'=>$request->applicant]);
+                            }
+                        }
+                    }
                 }
             }
         }
 
-   
-      
-    
-      "bgroup-date" => "2020-09-17"
-      "bgroup-result" => "jkasfsa"
-      "bgroup-next" => "2020-09-26"
-      "bglucose-date" => "2020-09-17"
-      "bglucose-result" => "sdj,sdvjkl"
-      "bglucose-next" => "2020-09-29"
-      "hiv-date" => "2020-09-07"
-      "hiv-result" => "fhjkafhaf"
-      "hiv-next" => "2020-09-14"
-      "hb-date" => "2020-09-24"
-      "hb-result" => "jhsd"
-      "hb-next" => "2020-09-16"
-      "upt-date" => "2020-09-23"
-      "upt-result" => "sdfjshdf"
-      "upt-next" => "2020-09-24"
-      "applicant" => "1"
     }
 
     /**

@@ -268,39 +268,39 @@
                         <tbody>
                           <tr>
                             <th>1.Resting ECG</th>
-                            <td><input type="date" name="egc-date" id="egc-date" class="input-special"></td>
-                            <td><input type="text" name="egc-result" id="egc-result" class="input-special"></td>
-                            <td><input type="date" name="egc-next" id="egc-next" class="input-special"></td>
+                            <td><input type="date" name="egcdate" id="egcdate" class="input-special"></td>
+                            <td><input type="text" name="egcresult" id="egcresult" class="input-special"></td>
+                            <td><input type="date" name="egcnext" id="egcnext" class="input-special"></td>
                           </tr>
                           <tr>
                             <th>2.Blood grouping</th>
-                            <td><input type="date" name="bgroup-date" id="bgroup-date" class="input-special"></td>
-                            <td><input type="text" name="bgroup-result" id="bgroup-result" class="input-special"></td>
-                            <td><input type="date" name="bgroup-next" id="bgroup-next" class="input-special"></td>
+                            <td><input type="date" name="bgroupdate" id="bgroupdate" class="input-special"></td>
+                            <td><input type="text" name="bgroupresult" id="bgroupresult" class="input-special"></td>
+                            <td><input type="date" name="bgroupnext" id="bgroupnext" class="input-special"></td>
                           </tr>
                           <tr>
                             <th>3.Blood glucose</th>
-                            <td><input type="date" name="bglucose-date" id="bglucose-date" class="input-special"></td>
-                            <td><input type="text" name="bglucose-result" id="bglucose-result" class="input-special"></td>
-                            <td><input type="date" name="bglucose-next" id="bglucose-next" class="input-special"></td>
+                            <td><input type="date" name="bglucosedate" id="bglucosedate" class="input-special"></td>
+                            <td><input type="text" name="bglucoseresult" id="bglucoseresult" class="input-special"></td>
+                            <td><input type="date" name="bglucosenext" id="bglucosenext" class="input-special"></td>
                           </tr>
                           <tr>
                             <th>4.HIV Serplogy</th>
-                            <td><input type="date" name="hiv-date" id="hiv-date" class="input-special"></td>
-                            <td><input type="text" name="hiv-result" id="hiv-result" class="input-special"></td>
-                            <td><input type="date" name="hiv-next" id="hiv-next" class="input-special"></td>
+                            <td><input type="date" name="hivdate" id="hivdate" class="input-special"></td>
+                            <td><input type="text" name="hivresult" id="hivresult" class="input-special"></td>
+                            <td><input type="date" name="hivnext" id="hivnext" class="input-special"></td>
                           </tr>
                           <tr>
                             <th>5.HB level</th>
-                            <td><input type="date" name="hb-date" id="hb-date" class="input-special"></td>
-                            <td><input type="text" name="hb-result" id="hb-result" class="input-special"></td>
-                            <td><input type="date" name="hb-next" id="hb-next" class="input-special"></td>
+                            <td><input type="date" name="hbdate" id="hbdate" class="input-special"></td>
+                            <td><input type="text" name="hbresult" id="hbresult" class="input-special"></td>
+                            <td><input type="date" name="hbnext" id="hbnext" class="input-special"></td>
                           </tr>
                           <tr>
                             <th>6.UPT</th>
-                            <td><input type="date" name="upt-date" id="upt-date" class="input-special"></td>
-                            <td><input type="text" name="upt-result" id="upt-result" class="input-special"></td>
-                            <td><input type="date" name="upt-next" id="upt-next" class="input-special"></td>
+                            <td><input type="date" name="uptdate" id="uptdate" class="input-special"></td>
+                            <td><input type="text" name="uptresult" id="uptresult" class="input-special"></td>
+                            <td><input type="date" name="uptnext" id="uptnext" class="input-special"></td>
                           </tr>
                       
                         </tbody>
