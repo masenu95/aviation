@@ -19,7 +19,8 @@ class CreateTestsTable extends Migration
             $table->string('date_performed');
             $table->string('result');
             $table->string('next_due');
-            $table->integer('user_id')->references('id')->on('users');
+            $table->integer('doctor_id')->references('id')->on('doctors');
+            $table->integer('applicant_id')->references('id')->on('applicants');
             $table->timestamps();
         });
     }

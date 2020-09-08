@@ -18,7 +18,8 @@ class CreateAudiogramsTable extends Migration
             $table->string('name');
             $table->string('left');
             $table->string('right');
-            $table->integer('user_id')->references('id')->on('users');
+            $table->integer('doctor_id')->references('id')->on('doctors');
+            $table->integer('applicant_id')->references('id')->on('applicants');
             $table->timestamps();
         });
     }
