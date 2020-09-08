@@ -9,7 +9,7 @@ use App\Doctor;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-class AccesorsController extends Controller
+class DoctorsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,8 +22,9 @@ class AccesorsController extends Controller
         if (Auth::user()->role_id==2) {
             $users=User::where('role_id',3)->get();
             return view('accessor.doctor.index',['users'=>$users,'i'=>1]);
-        }else{
-
+        }elseif (Auth::user()->role_id==1){
+            $users=User::where('role_id',3)->get();
+            return view('admin.doctor.index',['users'=>$users,'i'=>1]);
         }
      
 
@@ -51,8 +52,31 @@ class AccesorsController extends Controller
     public function store(Request $request)
     {
         //
+
+        
+        $validate=$request->validate([
+            'fname'=> 'required|string|max:255',
+            'lname'=> 'required|string|max:255',
+            'postal_code'=> 'required|string|max:255',
+            'postal_addr'=> 'required|string|max:255',
+            'phone'=> 'required|numeric',
+            'telephone'=> 'required|numeric',
+            'dob'=> 'required|string|max:255',
+            'nationality'=> 'required|string|max:255',
+            'id_no'=> 'required|string|max:255',
+            'gender'=> 'required|string|max:255',
+            'occupation'=> 'required|string|max:255',
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            
+         
+   		
+        ]);
+
+
         if (Auth::user()->role_id==2) {
         $pass='aviation123456';
+
+        
 
        $user=User::create([
             'fname' => ucfirst($request['fname']),

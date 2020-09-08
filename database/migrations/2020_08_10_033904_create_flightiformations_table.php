@@ -17,7 +17,7 @@ class CreateFlightiformationsTable extends Migration
             $table->id();
             $table->string('licence_no')->unique;
             $table->string('licence_type');
-            $table->boolean('type_of_flight');
+            $table->string('type_of_flight');
             $table->string('last_six');
             $table->string('last_twelve');
             $table->string('total');

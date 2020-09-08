@@ -22,7 +22,6 @@
                                                     <th class="th-sm">Postal Address </th>
                                                     <th class="th-sm">Postal code</th>
                                                     <th class="th-sm">Created at </th>
-                                                    <th class="th-sm">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -42,33 +41,12 @@
                                                             Female
                                                             @endif
                                                         </td>
-                                                        <td>{{ $user->occupation }}</td>
+                                                        <td>{{ $user->Occupation }}</td>
                                                         <td>{{ $user->postal_addr }}</td>
                                                         <td>{{ $user->postal_code }}</td>
                                                         <td>{{ $user->created_at }}</td>
                                                     
 
-                                                <td>
-                                                <a href="{{ url('accesor/'.$user->id.'/edit') }}">
-                                                        <i class="far fa-edit" title="Edit"></i>
-                                                    </a>
-
-                                                    <a class="remove" href="javascript:void(0)" title="Remove"
-                                                    onclick="var result=confirm('Are you sure you wish to delete this Route');
-                                                    if(result){
-                                                        event.preventDefault();
-                                                        document.getElementById('delete-form').submit();
-                                                    }
-                                                    ">
-                                                        <i class="far fa-trash-alt"></i>
-                                                        <form id="delete-form" action="{{route('accesor.destroy',[$user->id])}}" method="POST" style="display:none">
-                                                            <input type="hidden" name="_method" value="delete">
-                                                            {{ csrf_field() }}
-                                                        </form>
-
-                                                     </a>
-
-                                                    </td>
                                                 </tr>
 
                                                     @endforeach

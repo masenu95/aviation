@@ -42,7 +42,7 @@
                                                             Female
                                                             @endif
                                                         </td>
-                                                        <td>{{ $user->Occupation }}</td>
+                                                        <td>{{ $user->occupation }}</td>
                                                         <td>{{ $user->postal_addr }}</td>
                                                         <td>{{ $user->postal_code }}</td>
                                                         <td>{{ $user->created_at }}</td>

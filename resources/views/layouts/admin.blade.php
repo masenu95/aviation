@@ -149,7 +149,7 @@
                                     <i class="fa fa-caret-down"></i>
                                 </a>
                                   <ul  class="drop-down">
-                                    <li><a href="{{ url('doctors') }}">View all doctors</a></li>
+                                    <li><a href="{{ url('doctor') }}">View all doctors</a></li>
                                 </ul>
                              
                             </li>
@@ -172,6 +172,16 @@
                                 <li><a href="{{ url('doctor') }}">View all Doctor's</a></li>
                                 <li><a href="{{ url('doctor/create') }}">Add new Doctor's </a></li>
                                 
+                            </ul>
+                         
+                        </li>
+
+                        <li class="submenu">
+                            <a href="#"class="dropdown-btn"><i class="fa fa-mail-bulk icon-menu"></i>Applicantion
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                              <ul  class="drop-down">
+                                <li><a href="{{ url('application') }}">View all Application's</a></li>    
                             </ul>
                          
                         </li>

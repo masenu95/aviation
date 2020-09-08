@@ -54,8 +54,28 @@ class AccesorsController extends Controller
     public function store(Request $request)
     {
         //
+
+        $validate=$request->validate([
+            'fname'=> 'required|string|max:255',
+            'lname'=> 'required|string|max:255',
+            'postal_code'=> 'required|string|max:255',
+            'postal_addr'=> 'required|string|max:255',
+            'phone'=> 'required|numeric',
+            'telephone'=> 'required|numeric',
+            'dob'=> 'required|string|max:255',
+            'nationality'=> 'required|string|max:255',
+            'id_no'=> 'required|string|max:255',
+            'gender'=> 'required|string|max:255',
+            'occupation'=> 'required|string|max:255',
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            
+         
+   		
+        ]);
         if (Auth::user()->role_id==1) {
         $pass='aviation123456';
+
+
 
        $user=User::create([
             'fname' => ucfirst($request['fname']),
@@ -78,35 +98,9 @@ class AccesorsController extends Controller
         if($user){
             return redirect()->route('accesor.index')->with('success',$user->fname.' '.$user->lname.' is registered'); 
         }
-    }elseif(Auth::user()->role_id==2){
-        $pass='aviation123456';
-
-        $user=User::create([
-             'fname' => ucfirst($request['fname']),
-             'lname' => ucfirst($request['lname']),
-             'postal_code' => ucfirst($request['postal_code']),
-             'postal_addr' => ucfirst($request['postal_addr']),
-             'phone' => ucfirst($request['phone']),
-             'telephone' => ucfirst($request['telephone']),
-             'dob' => ucfirst($request['dob']),
-             'nationality' => ucfirst($request['nationality']),
-             'id_no' => ucfirst($request['id_no']),
-             'gender' => ucfirst($request['gender']),
-             'occupation' => ucfirst($request['occupation']),
-             'email' => ucfirst($request['email']),
-             'password' => Hash::make($pass),
-             'role_id'=>3,
-         ]);
-        
+    }
+} 
  
-         if($user){
-             return redirect()->route('accesor.index')->with('success',$user->fname.' '.$user->lname.' is registered'); 
-         }
-        
-    }
-
-        
-    }
 
     /**
      * Display the specified resource.
@@ -210,5 +204,11 @@ class AccesorsController extends Controller
     public function destroy($id)
     {
         //
+        $user=User::find($id);
+
+        if($user->delete()){
+            return redirect()->route('accesor.index')->with('success','accesor sucessful deleted');
+        }
+            return back()->withInput()->with('error','accesor is not deleted try again');
     }
 }

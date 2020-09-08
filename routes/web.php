@@ -23,7 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('accesor','AccesorsController');
 
-Route::resource('doctor','AccesorsController');
+Route::resource('doctor','DoctorsController');
 
 Route::resource('flightinfo','FlightiformationsController');
 
