@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Specialtest extends Model
+class Audiogram extends Model
 {
     //
     protected $fillable = [
-        'test','date_performed','result','next_due','doctor_id','applicant_id'
+        'left','right','doctor_id','applicant_id'
     ];
 
     public function applicant(){

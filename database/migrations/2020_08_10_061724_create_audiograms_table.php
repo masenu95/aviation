@@ -15,7 +15,6 @@ class CreateAudiogramsTable extends Migration
     {
         Schema::create('audiograms', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('left');
             $table->string('right');
             $table->integer('doctor_id')->references('id')->on('doctors');
