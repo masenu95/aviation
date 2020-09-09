@@ -536,6 +536,9 @@
                 <th scope="col"></th>
                 <th scope="col">N</th>
                 <th scope="col">ABN</th>
+                <th scope="col"></th>
+                <th scope="col">N</th>
+                <th scope="col">ABN</th>
                 
               </tr>
             </thead>
@@ -544,46 +547,138 @@
                 <th>1.Head and Neck</th>
                 <td></td>
                 <td></td>
-                <th>2.Skin and Lymphatics</th>
+                <th>6.Abdomen Hernia/Liver/Spleen</th>
+                <td></td>
+                <td></td>
+                <th>11.Skin and Lymphatics</th>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
-                <th>2.Ophthalmology Orbit,adnexa,visual fields,<br>pupils,optic fundi
+                <th>2.ENT System</th>
+                <td></td>
+                <td></td>
+                <th>7.Anus & Rectum</th>
+                <td></td>
+                <td></td>
+                <th>12.Musculoskeletal Spine,Upper and <br>lowe limbs@joint</th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>3.Ophthalmology Orbit,adnexa,visual fields,<br>pupils,optic fundi
                 ocular motility:Nystagmus,<br>eye muscle balance</th>
-                <td>Chest-Lungs & Breasts( Indicate)</td>
-                <td><input type="text" name="bgroupresult" id="bgroupresult" class="input-special"></td>
-                <td><input type="date" name="bgroupnext" id="bgroupnext" class="input-special"></td>
+                <td></td>
+                <td></td>
+                <th>8.Endocrine system</th>
+                <td></td>
+                <td></td>
+                <th>13.General</th>
+                <td></td>
+                <td></td>
               </tr>
               <tr>
-                <th>3.Blood glucose</th>
-                <td><input type="date" name="bglucosedate" id="bglucosedate" class="input-special"></td>
-                <td><input type="text" name="bglucoseresult" id="bglucoseresult" class="input-special"></td>
-                <td><input type="date" name="bglucosenext" id="bglucosenext" class="input-special"></td>
+                <th>4.Chest-Lungs & Breasts( Indicate)</th>
+                <td></td>
+                <td></td>
+                <th>9.Psychiatric</th>
+                <td></td>
+                <td></td>
+                <th>14.Identifying marks/tattoos/scars etc</th>
+                <td></td>
+                <td></td>
               </tr>
+
               <tr>
-                <th>4.HIV Serplogy</th>
-                <td><input type="date" name="hivdate" id="hivdate" class="input-special"></td>
-                <td><input type="text" name="hivresult" id="hivresult" class="input-special"></td>
-                <td><input type="date" name="hivnext" id="hivnext" class="input-special"></td>
+                <th>5.Cardio-Vascular System</th>
+                <td></td>
+                <td></td>
+                <th>10.Neurogical System Reflexes,etc</th>
+                <td></td>
+                <td></td>
               </tr>
-              <tr>
-                <th>5.HB level</th>
-                <td><input type="date" name="hbdate" id="hbdate" class="input-special"></td>
-                <td><input type="text" name="hbresult" id="hbresult" class="input-special"></td>
-                <td><input type="date" name="hbnext" id="hbnext" class="input-special"></td>
-              </tr>
-              <tr>
-                <th>6.UPT</th>
-                <td><input type="date" name="uptdate" id="uptdate" class="input-special"></td>
-                <td><input type="text" name="uptresult" id="uptresult" class="input-special"></td>
-                <td><input type="date" name="uptnext" id="uptnext" class="input-special"></td>
-              </tr>
+            
           
             </tbody>
           </table>
           
-    
+          <div class="row" class="">
+            <h5 class="peso">Clinical examination</h5>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">N</th>
+                <th scope="col">ABN</th>
+                <th scope="col"></th>
+                <th scope="col">N</th>
+                <th scope="col">ABN</th>
+                <th scope="col"></th>
+                <th scope="col">N</th>
+                <th scope="col">ABN</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1.Head and Neck</th>
+                <td></td>
+                <td></td>
+                <th>6.Abdomen Hernia/Liver/Spleen</th>
+                <td></td>
+                <td></td>
+                <th>11.Skin and Lymphatics</th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>2.ENT System</th>
+                <td></td>
+                <td></td>
+                <th>7.Anus & Rectum</th>
+                <td></td>
+                <td></td>
+                <th>12.Musculoskeletal Spine,Upper and <br>lowe limbs@joint</th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>3.Ophthalmology Orbit,adnexa,visual fields,<br>pupils,optic fundi
+                ocular motility:Nystagmus,<br>eye muscle balance</th>
+                <td></td>
+                <td></td>
+                <th>8.Endocrine system</th>
+                <td></td>
+                <td></td>
+                <th>13.General</th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>4.Chest-Lungs & Breasts( Indicate)</th>
+                <td></td>
+                <td></td>
+                <th>9.Psychiatric</th>
+                <td></td>
+                <td></td>
+                <th>14.Identifying marks/tattoos/scars etc</th>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <th>5.Cardio-Vascular System</th>
+                <td></td>
+                <td></td>
+                <th>10.Neurogical System Reflexes,etc</th>
+                <td></td>
+                <td></td>
+              </tr>
+            
+          
+            </tbody>
+          </table>
 
 
 
