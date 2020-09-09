@@ -18,9 +18,9 @@ class RecommendationController extends Controller
     {
         //
         if(Auth::user()->role_id == 2){
-            $applicant = Recommendation::where('occupation','Doctor')->get();
+            $reco = Recommendation::where('occupation','Doctor')->get();
 
-            return view('accessor.applicant.index');
+            return view('accessor.applicant.index',['reco'=>$reco,'i'=>1]);
         }
 
     }
@@ -76,6 +76,8 @@ class RecommendationController extends Controller
     public function show($id)
     {
         //
+        $reco=Recommendation::find($id);
+        return view('accessor.applicant.show',['reco'=>$reco]);
     }
 
     /**

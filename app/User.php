@@ -69,4 +69,12 @@ class User extends Authenticatable
     public function restriction(){
         return $this->hasOne('App\Restriction');
     }
+
+    public function famhistories(){
+        return $this->hasMany('App\Famhistory');
+    }
+
+    public function medicalhistories(){
+        return $this->hasMany('App\Medicalhistory');
+    }
 }

@@ -15,4 +15,8 @@ class Medicalhistory extends Model
     public function user(){
         return $this->belongsTo('App\User');
     }
+
+    public function disease(){
+        return $this->belongsTo('App\Disease');
+    }
 }

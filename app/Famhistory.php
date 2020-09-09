@@ -17,4 +17,8 @@ class Famhistory extends Model
         public function user(){
             return $this->belongsTo('App\User');
         }
+
+        public function family(){
+            return $this->belongsTo('App\Family');
+        }
 }
