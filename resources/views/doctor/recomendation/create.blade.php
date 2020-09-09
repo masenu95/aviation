@@ -15,7 +15,7 @@
             
         </div>
         <div class="col-lg-8 col-md-8">
-        <form action="{{route('eye.store')}}" method="POST" id="form-appli">
+        <form action="{{route('reco.store')}}" method="POST" id="form-appli">
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>

@@ -59,6 +59,14 @@ Route::resource('eye','EyeController');
 Route::get('eye/create/{id}','EyeController@create');
 
 
+Route::resource('reco','RecommendationController');
+Route::get('reco/create/{id}','RecommendationController@create');
+
+Route::resource('application','RecommendationController');
+
+
+
+
 
 
 

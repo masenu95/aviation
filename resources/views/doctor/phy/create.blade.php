@@ -7,7 +7,7 @@
         
         <div class="col-lg-4 col-md-4">
             <ul class="app-avs">
-            <li><a  href="{{url('clinical/create/'.$applicant)}}" >clinical examination</a></li>
+            <li><a  href="{{url('clinical/create/'.$applicant ?? '' ?? '' ?? '')}}" >clinical examination</a></li>
                 <li><a href="#" class="actives">Phyical examination</a></li>
                 <li><a href="#" class="disable" >Vision & Audiogram</a></li>
                 <li><a href="#" class="disable">Special Investigation</a></li>
@@ -169,7 +169,7 @@
             @if (session()->has('applicant'))
             <input type="hidden" name="applicant" value="{{session()->get('applicant')}}">   
             @else
-            <input type="hidden" name="applicant" value="{{$applicant}}">  
+            <input type="hidden" name="applicant" value="{{$applicant ?? '' ?? '' ?? ''}}">  
             @endif
         
 

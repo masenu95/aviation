@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -24,8 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $reguser = User::all()->count();
+        $accesor = User::where('role_id',2)->count();
+        $doctor = User::where('role_id',3)->count();
         if (Auth::user()->role_id==1) {
-            return view('admin.home');
+            return view('admin.home',['reguser'=>$reguser,'accesor'=>$accesor,'doctor'=>$doctor]);
         }else if(Auth::user()->role_id==2){
             return view('accessor.home');
         }else if(Auth::user()->role_id==3){
